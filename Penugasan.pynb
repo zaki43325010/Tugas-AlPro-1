@@ -1,0 +1,208 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOqKcW71OwMGydAXnju1HZQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/zaki43325010/Tugas-AlPro-1/blob/main/Penugasan.pynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Menghitung Volume Balok"
+      ],
+      "metadata": {
+        "id": "cBSz0rZCsmx4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p= int(input(\"masukkan panjang: \"))\n",
+        "l= int(input(\"masukkan lebar: \"))\n",
+        "t= int(input(\"masukkan tinggi: \"))\n",
+        "volume=p*l*t\n",
+        "print(\"volumenya adalah: \", volume)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Px0cT4Otsli6",
+        "outputId": "d601ef0c-2ae1-46b6-cff7-68df53b2ae59"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "masukkan panjang: 4\n",
+            "masukkan lebar: 4\n",
+            "masukkan tinggi: 4\n",
+            "volumenya adalah:  64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Konversi Waktu (Detik ke Jam:Menit:Detik)"
+      ],
+      "metadata": {
+        "id": "QF5c2nQrto9O"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total=int(input(\"masukkan waktu dalam detik: \"))\n",
+        "if total<0:\n",
+        "  print(\"tidak boleh negatif.\")\n",
+        "else:\n",
+        "  jam= total // 3600\n",
+        "  sisa= total % 3600\n",
+        "  menit= sisa // 60\n",
+        "  detik= sisa % 60\n",
+        "print (f\"{jam}:{menit}:{detik}\")\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0_KaLRnZtt_4",
+        "outputId": "a5dbd07d-fd93-4b6f-e90a-bd39ed79888f"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "masukkan waktu dalam detik: 5307\n",
+            "1:28:27\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Rata-rata Nilai Tiga Mata Kuliah"
+      ],
+      "metadata": {
+        "id": "uB3y-SqntugT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nilai1=float(input(\"masukkan nilai 1: \"))\n",
+        "nilai2=float(input(\"masukkan nilai 2: \"))\n",
+        "nilai3=float(input(\"masukkan nilai 3: \"))\n",
+        "total=(nilai1+nilai2+nilai3)/3\n",
+        "print(\"rata-rata nilai: \", total)\n",
+        "if total >=60: print(\"status: lulus\")\n",
+        "else: print(\"status: tidak lulus\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ba1UVQgvtzyD",
+        "outputId": "ce8f9f67-3e9b-4d1a-abca-9883401eeb12"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "masukkan nilai 1: 70\n",
+            "masukkan nilai 2: 90\n",
+            "masukkan nilai 3: 80\n",
+            "rata-rata nilai:  80.0\n",
+            "status: lulus\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Menghitung Diskon Belanja"
+      ],
+      "metadata": {
+        "id": "zpF5FNWOt0i_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "belanja= float(input(\"masukkan total belanja: Rp \"))\n",
+        "if total>=500000:\n",
+        "  diskon=0.2\n",
+        "elif total>=250000:\n",
+        "  diskon=0.1\n",
+        "else:\n",
+        "  diskon=0\n",
+        "potongan= belanja*diskon\n",
+        "total=belanja-potongan\n",
+        "print(\"total belanja : Rp\", belanja)\n",
+        "print(\"potongan      : \", (diskon*100),\"%\")\n",
+        "print(\"total bayar   : Rp \", total)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gnZeSQzEt0_7",
+        "outputId": "ff7074ad-3a60-4700-aa42-d89bf083481a"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "masukkan total belanja: Rp 150000\n",
+            "total belanja : Rp 150000.0\n",
+            "potongan      :  0 %\n",
+            "total bayar   : Rp  150000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "fMz37KaJ3YWm"
+      },
+      "execution_count": 20,
+      "outputs": []
+    }
+  ]
+}
